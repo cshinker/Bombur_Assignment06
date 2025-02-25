@@ -11,14 +11,27 @@
 # Citations: 
 
 # Anything else that's relevant:
-
-from basketball_package.basketball import *
+try:
+    from basketball_package.basketball import *
+except:
+    print("Unable to import basketball_package")
+try:
+    from ice_cream_package.ice_cream import *
+except:
+    print("unable to import ice_cream_package")
 
 if __name__ == "__main__":
-    my_basketball = Basketball("Orange", "Sticky")
-    print(my_basketball.__str__())
-    print(my_basketball.shoot())
-    my_basketball.set_color("Brown")
-    print(my_basketball.get_color())
-    my_basketball.set_texture("Worn Down")
-    print(my_basketball.get_texture())
+    try:
+        my_basketball = Basketball("Orange", "Sticky")
+        print(my_basketball.__str__())
+        print(my_basketball.shoot())
+        my_basketball.set_color("Brown")
+        print(my_basketball.get_color())
+        my_basketball.set_texture("Worn Down")
+        print(my_basketball.get_texture())
+    except:
+        print("Error with Basketball code")
+    try:
+        my_ice_cream = Ice_cream()
+    except:
+        print("Unable to instantiate object of class Ice_cream")
