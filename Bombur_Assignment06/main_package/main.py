@@ -18,3 +18,7 @@ if __name__ == "__main__":
     my_basketball = Basketball("Orange", "Sticky")
     print(my_basketball.__str__())
     print(my_basketball.shoot())
+    my_basketball.set_color("Brown")
+    print(my_basketball.get_color())
+    my_basketball.set_texture("Worn Down")
+    print(my_basketball.get_texture())
