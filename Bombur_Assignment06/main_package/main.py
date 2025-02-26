@@ -1,5 +1,4 @@
 
-=======
 # File Name: main.py
 # Student Name: Cam Shinker
 # email: shinkecj@mail.uc.edu
@@ -33,7 +32,17 @@ if __name__ == "__main__":
         print(my_basketball.get_texture())
     except:
         print("Error with Basketball code")
+
+
+    print("--------------------------------")
     try:
-        my_ice_cream = Ice_cream()
+        my_ice_cream = IceCream("Vanilla", 2.99)
+        print(my_ice_cream.__str__())
+        my_ice_cream.set_flavor("Peanut Butter Chocolate")
+        print(my_ice_cream.get_flavor())
+        my_ice_cream.set_price(3.49)
+        print(my_ice_cream.get_price())
+        my_ice_cream.sell()
     except:
-        print("Unable to instantiate object of class Ice_cream")
+        print("Error within IceCream code")
+    
